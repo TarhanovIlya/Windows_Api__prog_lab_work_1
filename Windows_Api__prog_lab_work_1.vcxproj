@@ -127,13 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Creator_Class.h" />
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="Reporter_Class.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Creator.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Reporter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Creator_Class.h" />
-    <ClInclude Include="Employee.h" />
+    <None Include="Creator.exe" />
+    <None Include="Reporter.exe" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

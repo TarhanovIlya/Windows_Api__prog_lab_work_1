@@ -10,15 +10,18 @@ int main() {
 
 	std::cout << "write .bin file name: ";
 	std::cin >> fileName;
-	
+	//strcpy_s(fileName, "employee.bin");
+
 	std::cout << "write number of employees: ";
 	std::cin >> employeesNum;
+	//employeesNum = 2;
+
+	creator.SetEmployeeNum(employeesNum);
 
 	creator.OpenBin(fileName);
 
-	for (counter = 0; counter < employeesNum; counter++) {
-		creator.WriteToBin(creator.CreateEmployee());
-	}
+	creator.WriteToBin();
+	
 	
 
 }

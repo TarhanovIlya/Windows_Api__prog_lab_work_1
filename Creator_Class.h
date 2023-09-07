@@ -7,7 +7,8 @@
 
 class Creator
 {
-	std::ofstream *file = nullptr;
+	std::ofstream file;
+	int EmployeeNum = 0;
 
 public:
 
@@ -17,9 +18,11 @@ public:
 
 	void OpenBin(char* fname);
 
-	employee* CreateEmployee();
+	void SetEmployeeNum(int employeeNum);
 
-	void WriteToBin(employee *emp);
+	employee CreateEmployee();
+
+	std::ofstream& WriteToBin();
 };
 
 Creator::Creator() {
@@ -28,18 +31,21 @@ Creator::Creator() {
 
 Creator::~Creator() {
 
-	file->close();
+	file.close();
 
-	delete file;
 };
 
 void Creator::OpenBin(char *fname) {
 	
-	this->file = new std::ofstream;
-	file->open(fname, std::ios::binary | std::ios::out | std::ios::app);
+	file.open(fname, std::ios::binary | std::ios::out);
+	
+	if (!file.is_open())
+	{
+		std::cout << "ERROR : FILE " << fname << " IS NOT OPEN\n";
+	}
 };
 
-employee* Creator::CreateEmployee() {
+employee Creator::CreateEmployee() {
 	
 	char name[10];
 	int num;
@@ -52,12 +58,28 @@ employee* Creator::CreateEmployee() {
 	std::cout << "hours: ";
 	std::cin >> hours;
 
-	return new employee(num, name, hours);
+	employee a(num, name, hours);
+	 
+	return a;
 	
 };
 
-void Creator::WriteToBin(employee *emp) {
+std::ofstream& Creator::WriteToBin() {
 
-	file->write((char*)emp, sizeof(employee));
+	file.write((char*)&EmployeeNum, sizeof(int));
+	
+	for (int i = 0; i < EmployeeNum; i++)
+	{
+		employee e = CreateEmployee();
+		file.write((char*)&e,sizeof(employee));
+	}
+
+	return file;
+
+}
+
+void Creator::SetEmployeeNum(int employeeNum) {
+
+	this->EmployeeNum = employeeNum;
 
 }

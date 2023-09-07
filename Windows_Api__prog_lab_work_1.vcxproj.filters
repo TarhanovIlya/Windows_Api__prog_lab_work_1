@@ -15,6 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Creator_Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reporter_Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Creator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -26,11 +37,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Creator_Class.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Employee.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="Creator.exe">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Reporter.exe">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
