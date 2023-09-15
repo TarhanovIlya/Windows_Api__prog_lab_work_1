@@ -1,21 +1,19 @@
 #include"Creator_Class.h"
 #include<iostream>
 
-int main() {
+int main(int argc, char* argv[]) {
 
 	char fileName[20];
 	int employeesNum = 0;
+	char tempInt[10];
 	Creator creator;
-	int counter;
+	
+	strcpy_s(fileName, argv[0]);
 
-	std::cout << "write .bin file name: ";
-	std::cin >> fileName;
-	//strcpy_s(fileName, "employee.bin");
+	strcpy_s(tempInt, argv[1]);
+	employeesNum = atoi(tempInt);
 
-	std::cout << "write number of employees: ";
-	std::cin >> employeesNum;
-	//employeesNum = 2;
-
+	
 	creator.SetEmployeeNum(employeesNum);
 
 	creator.OpenBin(fileName);

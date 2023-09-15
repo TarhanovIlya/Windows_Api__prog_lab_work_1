@@ -1,3 +1,0 @@
-Report of a file "employee.bin" :
-vitaly 3 5.1 10.2
-foma 7 9.2 18.4

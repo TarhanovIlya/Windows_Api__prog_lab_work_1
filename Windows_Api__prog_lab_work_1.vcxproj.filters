@@ -26,22 +26,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Creator.cpp">
+    <ClCompile Include="..\..\fin\temporary_cpp_to_exe_file\Reporter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Reporter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Creator.exe">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="Reporter.exe">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

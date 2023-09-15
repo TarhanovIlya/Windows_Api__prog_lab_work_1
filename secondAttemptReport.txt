@@ -1,4 +1,0 @@
-Report of a file "secondAttempt.bin" :
-Vikenty 1 23 80.5
-Anatoly 2 40 140
-Sergey 5 54.1 189.35
