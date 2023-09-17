@@ -45,8 +45,9 @@ int main() {
 	LPWSTR commandLine=wtext;
 
 
-	if (!CreateProcess(L"Creator.exe", commandLine, NULL, NULL, FALSE, NULL, NULL, NULL, &siCreator, &piCreator)) {
+	if (!CreateProcess(L"C:\\Users\\r1r2\\Desktop\\code\\Windows_Api__prog_lab_work_1\\x64\\Debug\\Creator.exe", commandLine, NULL, NULL, FALSE, NULL, NULL, NULL, &siCreator, &piCreator)) {
 		std::cout << "ERROR: PROCESS IS NOT CREATED\n";
+		return GetLastError();
 	}
 	
 	WaitForSingleObject(piCreator.hThread, INFINITE);
@@ -81,8 +82,9 @@ int main() {
 	LPWSTR commandLine2 = wtext;
 
 
-	if (!CreateProcess(L"Reporter.exe", commandLine2, NULL, NULL, FALSE, NULL, NULL, NULL, &siReporter, &piReporter)) {
+	if (!CreateProcess(L"C:\\Users\\r1r2\\Desktop\\code\\Windows_Api__prog_lab_work_1\\x64\\Debug\\Reporter.exe", commandLine2, NULL, NULL, FALSE, NULL, NULL, NULL, &siReporter, &piReporter)) {
 		std::cout << "ERROR: PROCESS IS NOT CREATED\n";
+		return GetLastError();
 	}
 
 	WaitForSingleObject(piReporter.hThread, INFINITE);
