@@ -133,7 +133,7 @@
     <ClInclude Include="Reporter_Class.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\fin\temporary_cpp_to_exe_file\Reporter.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
